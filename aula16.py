@@ -1,3 +1,4 @@
+#Atividade f string:
 primeiro_valor = input("Digite o primeiro valor: ")
 segundo_valor = input("Digite o segundo valor: ")
 
