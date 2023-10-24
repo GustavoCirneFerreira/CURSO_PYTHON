@@ -6,8 +6,13 @@
 #Obs.: a função len retorna a QUANTIDADE de 
 #caracteres da string.
 
-variavel = 'Olá Munda'
-print((variavel[:1:]))
-print((variavel[-1::]))
-print(variavel[::1])
-print (variavel[::-1])
+variavel = 'Olá'
+# print((variavel[:1:]))
+# print((variavel[-1::]))
+# print(variavel[::1])
+# print (variavel[::-1])
+
+if len(variavel) > 4:
+    print('Funcionou!')
+else:
+    print('Funcionou também!')
