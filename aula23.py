@@ -6,13 +6,15 @@
 #Obs.: a função len retorna a QUANTIDADE de 
 #caracteres da string.
 
-variavel = 'Olá'
+variavel = 'Tulioaa'
 # print((variavel[:1:]))
 # print((variavel[-1::]))
 # print(variavel[::1])
 # print (variavel[::-1])
 
-if len(variavel) > 4:
-    print('Funcionou!')
-else:
-    print('Funcionou também!')
+if len(variavel) <= 4:
+    print('Seu nome é curto!')
+elif len(variavel) <=6:
+    print('Seu nome é normal!')
+elif len(variavel) >= 6:
+    print('Seu nome é muito grande!')
