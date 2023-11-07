@@ -13,6 +13,7 @@
 # else:
 #     print('Não é um número inteiro...')
 
+
 # or e and (else e elif):
 
 # hora = input('Que horas são agora? ')
