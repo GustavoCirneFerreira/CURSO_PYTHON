@@ -13,6 +13,7 @@ while linha <= qtd_linhas:
     while coluna <= qtd_colunas:  
         print(f'{linha=}, {coluna=}')
         coluna += 1
+    
     linha += 1
 
 print('Acabou...')

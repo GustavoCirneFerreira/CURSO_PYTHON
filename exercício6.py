@@ -5,7 +5,9 @@ while True:
     operador = input('Digite o operador (+ - / *): ')
 
     numeros_validos = None
-
+    num1_float = 0
+    num2_float = 0
+        
     try:
         num1_float = float(numero1)
         num2_float = float(numero2)
@@ -27,7 +29,22 @@ while True:
         print('Digite apenas um operador.')
         continue
 
-###
+    print('Realizando o calculo, verifique o resultado abaixo:')
+    if operador == '+':
+        print(num1_float + num2_float)
+        
+    elif operador == '-':
+        print(num1_float - num2_float)
+
+    elif operador == '/':
+        print(num1_float / num2_float)
+
+    elif operador == '*':
+        print(num1_float * num2_float)
+
+    else:
+        print('Não deveriamos chegar aqui...')
+
 
     sair = input('Quer sair [s]im: ').lower().startswith('s')
     
