@@ -9,5 +9,5 @@ for i in list:
     if type(i) == str:
         nomes.append(i)
 
-# print('Nomes: ', nomes)
-# print('Numeros:', nums)
+print('Nomes: ', nomes)
+print('Numeros:', nums)
