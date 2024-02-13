@@ -1,30 +1,37 @@
+import os
+
 item_list = []
 
-try:
-    while True:
-        inserir = input('Selecione uma opção: [I]nserir [A]pagar [L]istar : ').upper()
+while True:
+    inserir = input('\nSelecione uma opção: [I]nserir [A]pagar [L]istar : ').upper()
 
 # INSERT ITEM IN SHOPPING LIST:
-        if inserir == 'I':
-            item = input('\nInsira seu item no carrinho: ')
-            item_list.append(item)
+    if inserir == 'I':
+        os.system('cls')
+        item = input('\nInsira seu item no carrinho: ')
+        item_list.append(item)
 
 # CHECK SHOPPING LIST ITEMS:
-        if inserir == 'L':
-            i = 0
-            for obj in item_list:
-                print(i, obj)
-                i += 1
+    elif inserir == 'L':
+        os.system('cls')
+        i = 0
+        for obj in item_list:
+            print(i, obj)
+            i += 1
 
 # REMOVE ITEM FROM SHOPPING LIST: 
-        if inserir == 'A':
+    elif inserir == 'A':
+        os.system('cls') 
+        try:
             remove = int(input('\nDiga qual índice você deseja remover: '))
-            del item_list[remove]
+            del item_list[remove]   
+        except ValueError:
+             print('\nPor favor digite números')
+        except IndexError:
+            print('\n Indíce fora de alcance.')
+            
+
 
 # WARINING FOR NOT FOLLOWING THE CODE:
-        if inserir != 'I' and inserir != 'A' and inserir != 'L':
-            print('\nOpção não disponível.')
-            continue
-
-except:
-    print('\nNão pode remover produtos em indices não existentes...')
+    else:
+        print('\nOpção não disponível.')

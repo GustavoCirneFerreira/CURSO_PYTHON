@@ -1,4 +1,8 @@
 # INTRODUCTION TO UNPACKING + TUPLES
-
-_, nome2, *_ = ['Maria', 'Helena', 'Luiz']
-print(nome2)
+# TUPLES ARE IMUTABLE LISTS
+nomes = ['Maria', 'Helena', 'Luiz']
+nomes = tuple(nomes)
+nomes = list(nomes)
+nomes[0] = 'Dédé'
+print(nomes)
+print(nomes[0])
