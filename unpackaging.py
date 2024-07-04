@@ -16,8 +16,8 @@ salas = [
 ]
 
 
-# a, b, *_, u= lista
-# print(a, u)
+a, b, *_, u= lista
+print(a, u)
 
 print(*lista)
 print(*salas, sep='\n')

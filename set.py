@@ -15,14 +15,21 @@
 # <-------------------------->
 # METHODS:
 
-# s1 = set()
-# s1.add('Luiz')
-# s1.add(1)
+s1 = set()
+s1.add('Luiz')
+s1.add(1)
 # s1.update(('Olá Mundo!',1,2,3,4))
 # # s1.clear()
 # s1.discard('Olá Mundo!')
-# print(s1)
+print(s1)
 
 # <-------------------------------------->
 # USEFUL OPERATORS:
 
+s1 = {1,2,3}
+s2 = {2,3,4}
+s3 = s1 | s2 # union
+s3 = s1 & s2 # intersection (itens presentes em ambos os sets)
+s3 = s2 - s1 # diference (itens apenas presentes no set da esquerda)
+s3 = s2 ^ s1 # symmetrical diference (itens que não estão em ambos)
+print(s3)

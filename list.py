@@ -6,7 +6,8 @@
 # CREATE, READ, UPDATE, DELETE = lista[i]
 #         012345;
 #        -12345;
-string = 'ABCDE'
+string = 'A B C D E'.split(' ')
+print(string)
 
 # lista = [123, 'comida', 2.5, True]
 # lista[-3] = 'Maria'
