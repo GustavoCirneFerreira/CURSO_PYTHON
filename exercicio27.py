@@ -7,6 +7,10 @@
 #     for num1, num2 in zip(lista1, lista2):
 #         lista_soma.append(num1 + num2)
 
+                    # or
+
+#         lista_soma = [x + y for x, y in zip(lista1, lista2)]  
+
 #     return list(lista_soma)
     
 # print(somar_listas())
