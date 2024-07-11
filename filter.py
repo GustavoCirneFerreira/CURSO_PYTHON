@@ -20,7 +20,7 @@ novos_produtos = filter(
     lambda p: p['preco'] > 100,
     produtos
 )
-    
+
 
 print_iter(produtos)
 print_iter(novos_produtos)
