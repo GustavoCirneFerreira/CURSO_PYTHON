@@ -32,9 +32,13 @@ total = functools.reduce(
     0
 )
 
+resultado = 0
+for prod in produtos:
+    resultado += prod['preco']
 
 # total = 0
 # for prod in produtos:
 #     total += prod['preco']
 
 print(total)
+print (resultado)
