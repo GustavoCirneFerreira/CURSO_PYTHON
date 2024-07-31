@@ -1,18 +1,16 @@
 # Try, except, else and finally
-string = 'Luiz'# str
-print(isinstance(string, str))
-
+# string = 'Luiz'# str
+# print(isinstance(string, str))
+lista = []
 try:
-    a = 18
-    b = 0
+
+    rivo = lista[-1]
     # print(b[0])
     print('LINHA 1')
-    c = a / b
     print('LINHA 2')
     
-except ZeroDivisionError as e:
-    print(e.__class__.__name__)
-    print(e)
+except IndexError as e:
+    print('Bão pode')
 except NameError:
     print('Nome b não está definido')
 except TypeError as error:
