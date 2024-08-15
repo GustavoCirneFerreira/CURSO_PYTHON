@@ -1,7 +1,6 @@
 import json
 
-lista_fazer = []
-lista_desfazer = []
+
 
 
 def listar():
@@ -40,10 +39,34 @@ def refazer():
         print('Nada a refazer...')
         print()
 
-def salvar_dados():
-    with open('dados_salvos.json', 'w+', encoding='utf-8') as arquivo:
-        json.dump(lista_fazer, arquivo, indent=2)
+def adicionar():
+    lista_fazer.append(entrada)
 
+    print('TAREFAS')
+    for item in lista_fazer:
+        print(item)
+    print()
+
+def ler(tarefas, caminho_arquivo):
+    dados = []
+    try:
+        with open(caminho_arquivo, 'r', encoding='utf8') as arquivo:
+            dados = json.load(arquivo)
+    except FileNotFoundError:
+        print('Arquivo não existe...')
+        salvar_dados(tarefas, caminho_arquivo)
+    return dados
+
+def salvar_dados(tarefas, caminho_arquivo):
+    dados = tarefas
+    with open(caminho_arquivo, 'w+', encoding='utf-8') as arquivo:
+        dados = json.dump(tarefas, arquivo, indent=2, ensure_ascii=True)
+    return dados
+
+CAMINHO_ARQUIVO = 'aula_119.json'
+
+lista_fazer = ler([], 'aula_119.json')
+lista_desfazer = []
 
 while True:
     print('Comandos: listar, desfazer, refazer')
@@ -55,30 +78,23 @@ while True:
         'listar': lambda: listar(),
         'desfazer': lambda: desfazer(),
         'refazer': lambda: refazer(),
+        'adicionar': lambda: adicionar()
     }
-    comando = comandos.get(entrada)
+    comando = comandos.get(entrada) if comandos.get(entrada) is not None else \
+        comandos['adicionar']
+    comando()
+    salvar_dados(lista_fazer, CAMINHO_ARQUIVO)
 
 
-    if entrada == 'listar':
-        listar()
-        continue
 
-    elif entrada == 'desfazer':
-        desfazer()
-        salvar_dados()
-        continue
+    # if entrada == 'listar':
+    #     listar()
+    #     continue
 
-    elif entrada == 'refazer':
-        refazer()
-        salvar_dados()
-        continue
+    # elif entrada == 'desfazer':
+    #     desfazer()
+    #     continue
 
-    else:
-        lista_fazer.append(entrada)
-
-        print('TAREFAS')
-        for item in lista_fazer:
-            print(item)
-        print()
-        salvar_dados()
-        continue
+    # elif entrada == 'refazer':
+    #     refazer()
+    #     continue
