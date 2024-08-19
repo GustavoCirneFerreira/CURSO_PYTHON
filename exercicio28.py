@@ -1,8 +1,6 @@
 import json
 
 
-
-
 def listar():
     print('TAREFAS')
     for item in lista_fazer:
@@ -65,7 +63,7 @@ def salvar_dados(tarefas, caminho_arquivo):
 
 CAMINHO_ARQUIVO = 'aula_119.json'
 
-lista_fazer = ler([], 'aula_119.json')
+lista_fazer = ler([], CAMINHO_ARQUIVO)
 lista_desfazer = []
 
 while True:
