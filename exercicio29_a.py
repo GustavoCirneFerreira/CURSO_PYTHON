@@ -6,16 +6,22 @@ class Pessoa:
         self.idade = idade
 
 p1 = Pessoa('Eduardo', '45')
+p2 = Pessoa('Renata', '30')
+p3 = Pessoa('Rennan', '13')
 
 # print(p1.__dict__)
 
-CAMINHO_ARQUIVO = 'exercicio_dados.json'
+bd = [p1.__dict__, p2.__dict__, p3.__dict__]
+
+CAMINHO_ARQUIVO = 'exercicio_29.json'
 
 def salvar_dados(info):
-    dados = info
     with open(CAMINHO_ARQUIVO, 'w', encoding='utf8') as arquivo:
-        dados = json.dump(info, arquivo, indent=2, ensure_ascii=True)
-    return dados
+        print('FAZENDO DUMP')
+        json.dump(info, arquivo, indent=2, ensure_ascii=True)
+    return info
 
-salvar_dados(p1.__dict__)
 
+# if __name__ == '__main__':
+#     print('ELE É O MAIN')
+#     salvar_dados(bd)
