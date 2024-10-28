@@ -1,0 +1,1 @@
+Success: Deu Certo (LogFileMixin)Error: qualquer coisa (LogFileMixin)Success: Deu Certo (LogFileMixin)Success: Galaxy S está ligado. (Smartphone)Error: Galaxy S está desligado. (Smartphone)

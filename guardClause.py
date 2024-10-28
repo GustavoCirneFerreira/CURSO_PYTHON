@@ -34,7 +34,7 @@ def refazer():
         print('TAREFAS')
         for item in lista_fazer:
             print(item)
-            print()
+        print()
 
     except IndexError:
         print('Nada a refazer...')
