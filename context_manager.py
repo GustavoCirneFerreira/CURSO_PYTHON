@@ -17,10 +17,14 @@ class MyContextManager:
     def __enter__(self):
         print('ABRINDO ARQUIVO')
         self._arquivo = open(self.caminho_arquvivo, self.modo, encoding='utf8')
-
+        return self._arquivo
+    
     def __exit__(self, class_exception, exception_, traceback_):
         print('FECHANDO ARQUIVO')
         self._arquivo.close()
 
 with MyContextManager('context_manager.txt', 'w') as arquivo:
     print('WITH', arquivo)
+    arquivo.write('Linha 1')
+    arquivo.write('Linha 2')
+    arquivo.write('Linha 3')
