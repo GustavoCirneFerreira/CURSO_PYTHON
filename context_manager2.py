@@ -18,3 +18,5 @@ with my_open('context_manager2.txt', 'w') as arquivo:
     arquivo.write('Linha 2\n', 123)
     arquivo.write('Linha 3\n')
     print('WITH', arquivo)
+
+

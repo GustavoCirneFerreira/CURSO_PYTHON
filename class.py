@@ -24,3 +24,4 @@ with open(CAMINHO_ARQUIVO, 'w', encoding='utf-8') as arquivo:
     dados = json.dump(p1.nome, arquivo, indent=2, ensure_ascii=True)
 
     
+    
